@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PMPML Smart Route Planner — 3D Algorithm Visualizer</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ═══ INTRO OVERLAY ═══ -->
+  <div id="intro-overlay" class="overlay">
+    <div class="intro-content">
+      <div class="intro-glow"></div>
+      <h1 class="intro-title">
+        <span class="title-icon">🚌</span>
+        PMPML Smart Route Planner
+      </h1>
+      <p class="intro-subtitle">3D Algorithm Visualizer for Pune & Pimpri-Chinchwad Transit</p>
+      <div class="intro-features">
+        <div class="feature">🔍 Dijkstra's Shortest Path</div>
+        <div class="feature">🎒 Knapsack Stop Selection</div>
+        <div class="feature">🗺️ TSP Tour Optimization</div>
+        <div class="feature">🚌 Multi-Bus Scheduling</div>
+      </div>
+      <button id="start-btn" class="btn-start">
+        <span>Start Demo</span>
+        <span class="btn-arrow">→</span>
+      </button>
+      <p class="intro-disclaimer">
+        ⚠ All data is illustrative for educational purposes.<br>
+        Not verified official PMPML data. Simplified demonstration map.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══ MAIN APPLICATION ═══ -->
+  <div id="main-app" class="hidden">
+
+    <!-- Top bar: stage tabs -->
+    <header id="top-bar">
+      <div class="logo-small">🚌 PMPML Route Planner</div>
+      <nav id="stage-tabs"></nav>
+    </header>
+
+    <!-- Main layout -->
+    <div id="app-layout">
+      <!-- 3D viewport -->
+      <div id="viewport">
+        <div id="three-container"></div>
+        <!-- Control bar overlay -->
+        <div id="control-bar"></div>
+        <!-- Stats bar -->
+        <div id="stats-bar"></div>
+      </div>
+
+      <!-- Side panel -->
+      <aside id="side-panel"></aside>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
+
